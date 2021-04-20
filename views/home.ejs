@@ -1,0 +1,8 @@
+<%- include('partials/header'); -%>
+
+<% postArray.forEach((item, i) => { %>
+  <a class="bigLink" href="posts/<%= item._id %>"> <%= item.title %> </a>
+  <p><%= item.content.slice(0, 100) %>...<a href="posts/<%= item._id %>"> Read more </a></p>
+<% }); %>
+
+<%- include('partials/footer'); -%>
